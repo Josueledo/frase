@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+/* contianer */
+.page {
+    position: relative;
+    display: none;
+    box-sizing: border-box;
+    max-width: 300px;
+    font-family: cursive;
+    font-size: 20px;
+    border-radius: 10px;
+    background: #fff;
+    background-image: linear-gradient(#f5f5f0 1.1rem, #ccc 1.2rem);
+    background-size: 100% 1.2rem;
+    line-height: 1.2rem;
+    padding: 1.4rem 0.5rem 0.3rem 4.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    }
+  
+  .page::before,
+  .page::after {
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    width: 40%;
+    height: 10px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  .page::before {
+    left: 15px;
+    transform: skew(-5deg) rotate(-5deg);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .page::after {
+    right: 15px;
+    transform: skew(5deg) rotate(5deg);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .page:hover::before,
+  .page:hover::after {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  }
+  
+  .margin {
+    position: absolute;
+    border-left: 1px solid #d88;
+    height: 100%;
+    left: 3.3rem;
+    top: 0;
+  }
+  
+  .page .text {
+    font-size: 16px;
+    margin: 0;
+    text-indent: 0rem;
+    padding-bottom: 1rem;
+    color: black;
+    line-height: 19px;
+    transform: translateY(0em);
+  }
+
+
+
+/* Categoria */
+
+  
+
+
+
+
+/* button */
+button {
+    background: #fff;
+    border: none;
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    margin-bottom: 15px;
+  }
+  
+  span {
+    display: inline-block;
+    transform: skew(21deg);
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+  button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+
+
+  
+  .active{
+    display: none;
+  }
